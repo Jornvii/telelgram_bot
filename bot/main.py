@@ -19,9 +19,15 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('How can I help you today?')
 
 
+# async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     await update.message.reply_text('Welcome here! I am Jiivorn bot. You can ask me like hello, how are you, what is your name.')
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Welcome here! I am Jiivorn bot.')
-
+    await update.message.reply_text(
+        'Welcome here! I am Jiivorn bot. You can ask me like:\n'
+        '🥳 hello\n'
+        '🥳 how are you\n'
+        '🥳 what is your name'
+    )
 
 # --- Response Logic ---
 def handle_response(text: str) -> str:
